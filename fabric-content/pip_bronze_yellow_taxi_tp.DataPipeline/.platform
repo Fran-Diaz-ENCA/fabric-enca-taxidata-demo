@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "DataPipeline",
+    "displayName": "pip_bronze_yellow_taxi_tp"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c37786ca-5775-4426-a0f7-e15d62015aeb"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.59\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "0c75041eb5ce36a6744c",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2bed3a4b09dd7d97644b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":48.49519743863394,\"y\":92.20917822838847,\"z\":0,\"width\":596.2860192102454,\"height\":279.3596584845251,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"silver_yellow_taxt_tr.store_and_fwd_flag\",\"active\":true}],\"Y\":[{\"queryRef\":\"silver_yellow_taxt_tr.Airport Fee\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"silver_yellow_taxt_tr\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"store_and_fwd_flag\"},\"Name\":\"silver_yellow_taxt_tr.store_and_fwd_flag\",\"NativeReferenceName\":\"store_and_fwd_flag\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Airport Fee\"},\"Name\":\"silver_yellow_taxt_tr.Airport Fee\",\"NativeReferenceName\":\"Airport Fee\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"Airport Fee\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 279.36,
+          "width": 596.29,
+          "x": 48.50,
+          "y": 92.21,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
