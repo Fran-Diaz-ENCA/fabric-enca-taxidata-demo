@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Airport Data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2cd7eedc-fd60-4bad-b8fa-ea5f943e95c6"
+  }
+}

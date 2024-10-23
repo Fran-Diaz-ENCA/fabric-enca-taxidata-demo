@@ -8,14 +8,9 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "f0225bed-f40c-4634-bac5-a1b4e4af9594",
-# META       "default_lakehouse_name": "lh_taxi_data",
-# META       "default_lakehouse_workspace_id": "00c05ec9-97b8-47d0-9d6a-3776e00b613d",
-# META       "known_lakehouses": [
-# META         {
-# META           "id": "f0225bed-f40c-4634-bac5-a1b4e4af9594"
-# META         }
-# META       ]
+# META       "default_lakehouse": "fed97e2e-a913-4365-8a22-53f7d0bbbbf4",
+# META       "default_lakehouse_name": "tcl_trip_lakehouse",
+# META       "default_lakehouse_workspace_id": "1f17fff3-2c59-4e2c-8c6c-928ebf7f365b"
 # META     }
 # META   }
 # META }
