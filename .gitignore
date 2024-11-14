@@ -1,2 +1,3 @@
 # Rutas que no subiremos
 /fabric-content/pip_bronze_yellow_taxi_tp.DataPipeline
+/fabric-content/DataflowsStagingLakehouse.Lakehouse
