@@ -10,7 +10,15 @@
 # META     "lakehouse": {
 # META       "default_lakehouse": "fed97e2e-a913-4365-8a22-53f7d0bbbbf4",
 # META       "default_lakehouse_name": "tcl_trip_lakehouse",
-# META       "default_lakehouse_workspace_id": "1f17fff3-2c59-4e2c-8c6c-928ebf7f365b"
+# META       "default_lakehouse_workspace_id": "1f17fff3-2c59-4e2c-8c6c-928ebf7f365b",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "fed97e2e-a913-4365-8a22-53f7d0bbbbf4"
+# META         },
+# META         {
+# META           "id": "2014010f-b370-44e2-b9c8-6d8fdf8e5124"
+# META         }
+# META       ]
 # META     }
 # META   }
 # META }
