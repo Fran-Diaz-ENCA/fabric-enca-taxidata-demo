@@ -37,6 +37,7 @@
           "secureOutput": false
         },
         "name": "Lookup Files",
+        "description": "Files search data",
         "dependsOn": []
       },
       {
