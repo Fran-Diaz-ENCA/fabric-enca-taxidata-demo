@@ -8,9 +8,14 @@
 # META   },
 # META   "dependencies": {
 # META     "lakehouse": {
-# META       "default_lakehouse": "fed97e2e-a913-4365-8a22-53f7d0bbbbf4",
+# META       "default_lakehouse": "2014010f-b370-44e2-b9c8-6d8fdf8e5124",
 # META       "default_lakehouse_name": "tcl_trip_lakehouse",
-# META       "default_lakehouse_workspace_id": "1f17fff3-2c59-4e2c-8c6c-928ebf7f365b"
+# META       "default_lakehouse_workspace_id": "659e7793-6d0e-4d13-bf09-32503f437e53",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "2014010f-b370-44e2-b9c8-6d8fdf8e5124"
+# META         }
+# META       ]
 # META     }
 # META   }
 # META }
@@ -23,95 +28,6 @@
 
 spark.conf.set("spark.sql.parquet.vorder.enabled", "true")
 spark.conf.set("spark.microsoft.delta.optimizeWrite.enabled", "true")
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-# from pyspark.sql import SparkSession
-# from pyspark.sql import Row
-# from datetime import datetime, timedelta
-
-# # Listas iniciales
-# dataset_names = [
-#     "Yellow Taxi Trip Records",
-#     "Green Taxi Trip Records",
-#     "For-Hire Vehicle Trip Records",
-#     "High Volume For-Hire Vehicle Trip Records"
-# ]
-
-# file_names = [
-#     "yellow_tripdata",
-#     "green_tripdata",
-#     "fhv_tripdata",
-#     "fhvhv_tripdata"
-# ]
-
-# # Generar todas las combinaciones de años y meses desde 2009 hasta 2024-03
-# start_date = datetime(2009, 1, 1)
-# end_date = datetime(2024, 3, 1)
-# dates = []
-
-# current_date = start_date
-# while current_date <= end_date:
-#     year_month_str = current_date.strftime("%Y%m")
-#     year_month_parquet = current_date.strftime("%Y-%m")
-#     dates.append((year_month_str, year_month_parquet))
-#     current_date += timedelta(days=32)
-#     current_date = current_date.replace(day=1)
-
-# # Crear filas para el DataFrame
-# rows = []
-# for year_month_str, year_month_parquet in dates:
-#     for dataset_name, file_name in zip(dataset_names, file_names):
-#         rows.append(Row(year_month=year_month_str, dataset_name=dataset_name, file_name=f"{file_name}_{year_month_parquet}.parquet"))
-
-# # Crear DataFrame
-# df = spark.createDataFrame(rows)
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-# # Definir los datos
-# years = list(range(2009, 2025))
-# months = [f"{i:02d}" for i in range(1, 13)]
-# dataset_names = [
-#     "Yellow Taxi Trip Records",
-#     "Green Taxi Trip Records",
-#     "For-Hire Vehicle Trip Records",
-#     "High Volume For-Hire Vehicle Trip Records"
-# ]
-# file_folders = [
-#     "yellow_tripdata",
-#     "green_tripdata",
-#     "fhv_tripdata",
-#     "fhvhv_tripdata"
-# ]
-
-# # Generar filas
-# data = []
-# for year in years:
-#     for month in months:
-#         if year == 2024 and month == "04":
-#             break
-#         year_month = f"{year}{month}"
-#         for dataset_name, file_folder in zip(dataset_names, file_folders):
-#             file_name = f"{file_folder}_{year}-{month}.parquet"
-#             data.append((year_month, dataset_name, file_name, file_folder, 1))
-
-# # Crear un DataFrame
-# df = spark.createDataFrame(data, ["year_month", "dataset_name", "file_name", "file_folder", "enableToLoad"])
 
 # METADATA ********************
 
@@ -150,31 +66,6 @@ for dataset_name, folder, file_prefix, start_year, start_month in datasets:
 columns = ["dataset_name", "file_name", "file_folder", "date", "enabledToLoad"]
 df = spark.createDataFrame(data, columns)
 
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-from pyspark.sql.functions import lit, col
-
-# df = df.withColumn("enableToLoad", lit(1))
-
-# METADATA ********************
-
-# META {
-# META   "language": "python",
-# META   "language_group": "synapse_pyspark"
-# META }
-
-# CELL ********************
-
-# df = df.filter(col("year_month") > 202401)#.filter(col("file_name").like("yellow_tripdata%"))
-display(df)
 
 # METADATA ********************
 
